@@ -17,7 +17,7 @@ public class Atm {
 		AtMethods welcomeselect = new AtMethods ();
 		
 		
-	for(int attempt=0;attempt<=2;attempt++) {
+	for(int attempt=2;attempt>=0;attempt--) {
 		
 		int checkPIn = chPin.enterPin();
 		
@@ -27,12 +27,17 @@ public class Atm {
 					checkPIn ==pin[9]) {
 				
 				System.out.println("Welcome to our System");
-				int welcomechoose = welcomeselect.welcome();
+				
+				
+					int welcomechoose = welcomeselect.welcome();
+					
+				
+				
 				
 				break;
 				}
 			
-			
+			System.out.println("You have "+attempt+" attempts left");
 			
 		}
 		
